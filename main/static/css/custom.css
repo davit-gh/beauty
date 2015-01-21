@@ -1,0 +1,225 @@
+.banner a {
+	display: block;
+	color: #fff;
+	padding: 107px 0 117px;
+	text-align: center;
+	font: 300 48px/60px 'Open Sans', sans-serif;
+}
+.b1 a, .b2 a, .b3 a, .links a.l, .links a.l1, .links a.l2 {
+	text-decoration: none;
+}
+
+.b1 a {
+	background-color: #c173b1;
+}
+
+.b2 a {
+	background-color: #8e80a6;
+}
+
+.b3 a {
+	background-color: #9a1356;
+}
+
+.banner a:hover {
+	background-color: #fff !important;
+	color: #5a4275;
+}
+
+.links a {
+	padding: 20px;
+	display: block;
+	color: #fff;
+	font: 300 48px/60px 'Open Sans', sans-serif;
+	text-align: center;
+}
+
+.links a:hover {
+	background-color: #fff !important;
+	color: #5a4275;
+}
+
+.links a.l{
+	background-color: #5a4275;
+}
+
+.links a.l1 {
+	background-color: #e06091;
+}
+
+.links a.l2 {
+	background-color: #81548b;
+}
+
+div.row.links{
+	margin-top: 50px;
+}
+
+.slogan {
+	padding: 33px 0 36px;
+	text-align: center;
+	color: #24124d;
+	font: 30px/30px 'Open Sans', sans-serif;
+	background: url(../images/slogan_bg.jpg) center 0 no-repeat;
+}
+
+
+#footer ul li {
+	display: inline-block;
+	color: #cebbd6;
+	font: 500 30px/30px 'Economica', sans-serif;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+
+html,
+body {
+  height: 100%;
+  /* The html and body elements cannot have any padding or margin. */
+}
+
+/* Wrapper for page content to push down footer */
+#wrap {
+  min-height: 100%;
+  height: auto;
+  /* Negative indent footer by its height */
+  margin: 0 auto -60px;
+  /* Pad bottom by footer height */
+  padding: 0 0 60px;
+}
+
+/* Set the fixed height of the footer here */
+#footer {
+  height: 70px;
+  background-color: #f5f5f5;
+  text-align: center;
+
+}
+
+@media (max-width: 767px) {
+	#footer {
+	  margin-left: -20px;
+	  margin-right: -20px;
+	  padding-left: 20px;
+	  padding-right: 20px;
+	}
+}
+/* End of Sticky footer styles
+-------------------------------------------------- */
+
+.icon-md {
+font-size: 36px;
+height: 60px;
+width: 60px;
+line-height: 60px !important;
+color: #fff;
+margin-right: 10px;
+background-color: rgba(0, 0, 0, 0.4);
+text-align: center;
+display: block;
+border-radius: 50%;
+-webkit-transition: 500ms;
+-moz-transition: 500ms;
+-o-transition: 500ms;
+transition: 500ms;
+}
+
+#footer ul > li:hover .icon-md {
+border-radius: 10px;
+background-color: rgba(0, 0, 0, 0.8);
+}
+
+ul.footer-tree-menu-level-0 > li{
+	padding: 0 3px;
+}
+
+ul.footer-tree-menu-level-0 > li > a{
+	text-decoration: none;
+}
+
+footer {
+	display: block;
+	position: relative;
+	z-index: 10;
+	border-top: 2px solid #8c799e;
+	color: #aea9a9;
+	background-color: #333;
+}
+
+.navbar-nav>li>a {
+	padding-top: 50px;
+	line-height: 20px;
+	font-size: 29px;
+}
+
+.text2 {
+	font-size: 19px;
+	color: #17063c;
+	line-height: 30px;
+	margin-top: -6px;
+	margin-bottom: 49px;
+}
+
+h3{
+	color: #9a1356;
+	padding-top: 16px;
+	font-size: 30px;
+	margin-bottom: 37px;
+	line-height: 40px;
+}
+
+div#popular.row{
+	padding-bottom: 20px;
+}
+
+button#send_btn.btn.btn-primary{
+	margin-top: 10px;
+}
+
+.caption.fadeIn > h2 {
+	font-weight: 300;
+	color: #843a75;
+	font-size: 72px;
+	line-height: 90px;
+	float: right;
+}
+
+div.col-xs-6.col-sm-4 > div > h2{
+	padding: 55px 0;
+	text-align: center;
+	margin: 0 0 30px;
+}
+
+div.col-xs-6.col-sm-4 > div > h2:hover{
+	background-color: #fff !important;
+	color: #5a4275;
+}
+
+.b1{
+	background-color: #c173b1;
+}
+
+.b2{
+	background-color: #8e80a6;
+}
+
+.b3{
+	background-color: #9a1356;
+}
+
+.banner > h2{
+	font-weight: bold;
+	color: #843a75;
+	font-size: 6vw;
+	line-height: 90px;
+}
+
+div#navbar{
+    background: url("../images/menu-flowers.jpg") no-repeat;
+    margin: 0;
+}
+
+body#contact{
+	background: url("../images/menu-flowers.jpg");
+}

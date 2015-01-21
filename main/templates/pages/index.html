@@ -1,0 +1,89 @@
+{% extends "pages/page.html" %}
+
+{% load staticfiles mezzanine_tags i18n %}
+{% block body_id %}{% endblock %}
+
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/demo.css' %}" type="text/css" media="all">
+
+{% endblock %}
+
+{% block extra_js %}
+    <script type="text/javascript" src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/tms-0.4.1.js' %}"></script>
+    <script type="text/javascript">
+    jQuery(document).ready(function(){
+        
+            jQuery('.slider')._TMS({
+            show:0,
+            pauseOnHover:false,
+            prevBu:'.prev',
+            nextBu:'.next',
+            playBu:'.play',
+            duration:10000,
+            preset:'zoomer',
+            pagination:true,//'.pagination',true,'<ul></ul>'
+            pagNums:false,
+            slideshow:7000,
+            numStatus:true,
+            banners:'fromRight',// fromLeft, fromRight, fromTop, fromBottom
+            waitBannerAnimation:false,
+            progressBar:'<div class="progbar"></div>',
+            pagination:false
+        })  
+        
+        }); 
+</script>
+{% endblock %}
+
+{% block no_leftest_content %}{% endblock %}
+{% block no_right_content %}{% endblock %}
+{% block left-span-size %}sm-12{% endblock %}
+
+{% block main_slider %}
+    
+        <div class="slider">
+            <ul class="items">
+                {% for slide in page.homepage.slides.all %}
+                    <li><img src="{{ MEDIA_URL }}{{ slide.image_back }}" /><span class="banner">{{ slide.text|richtext_filters|safe }}</span></li>
+                {% endfor %}
+            </ul>
+        </div>
+        <a href="#" class="prev">&lt;</a> <a href="#" class="play"><em>stop</em><span>play</span></a> <a href="#" class="next">&gt;</a>
+{% endblock main_slider %}
+
+{% block left_content %}    
+            
+                <div class="row links">
+                    <div class="col-sm-4">
+                        <a href="#" class="l"><h2>Face Care</h2></a>
+                    </div>
+                    <div class="col-sm-4">
+                        <a href="#" class="l1"><h2>Hand Care</h2></a>
+                    </div>
+                    <div class="col-sm-4">
+                        <a href="#" class="l2"><h2>Foot Care</h2></a>
+                    </div>
+                </div>
+            
+            <div class="slogan">
+                We are the Beauty &amp; Spa Salon based in Yerevan <br>
+                We Want to Make Your Life Beautiful
+            </div>
+                
+                <div class="row">
+                    {% for item in items %}
+                        <div class="col-xs-6 col-sm-4">
+                            <img src="{{ MEDIA_URL }}{{ item.featured_image }}" class="img-responsive" alt="">
+                            <div class="{% cycle 'b1' 'b2' 'b3' %}">{{ item.content|richtext_filters|safe }}</div>
+                        </div>
+                        
+                        
+                    {% endfor %}
+                    
+                </div>
+                
+{% endblock left_content %}
+
+

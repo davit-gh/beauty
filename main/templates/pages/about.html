@@ -1,0 +1,33 @@
+{% extends "pages/page.html" %}
+
+{% load i18n mezzanine_tags staticfiles %}
+
+{% block extra_css %}
+{% endblock %}
+{% block no_leftest_content %}{% endblock %}
+{% block no_right_content %}{% endblock %}
+{% block left-span-size %}sm-12{% endblock %}
+{% block extra_js %}
+{% endblock %}
+
+{% block body_id %}about{% endblock %}
+
+{% block extra_content %}
+	{% editable page.title page.richtextpage.content %}
+		<h3>{{ page.title }}</h3>
+		{{ page.richtextpage.content|richtext_filters|safe }}
+	{% endeditable %}
+{% endblock %}
+
+ {% block left_content %}
+ 	<div class="row">
+ 		{% for item in portitems %}
+			<div class="col-sm-3">
+				<img src="{{ MEDIA_URL }}{{ item.featured_image }}" alt="" class="img-responsive">
+				<div class="text1"><a href="#">{{ item.title }}</a></div>
+				{{ item.content|richtext_filters|safe }}
+			</div>
+		{% endfor %}
+	</div>
+{% endblock %}
+
