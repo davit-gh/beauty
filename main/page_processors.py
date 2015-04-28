@@ -38,7 +38,7 @@ def home_processor(request, page):
     
     return {'items': items}
 
-@processor_for('services')
+@processor_for('gallery')
 def service_processor(request, page):
     #pdb.set_trace()
     items = PortfolioItem.objects.published().prefetch_related('categories')
