@@ -373,4 +373,5 @@ else:
     set_dynamic_settings(globals())
 
 
-SITE_TITLE = "Aga Image Studio"
+SITE_TITLE = "Colors of Armenia"
+COMMENTS_DISQUS_SHORTNAME = "colorsofarmenia"
