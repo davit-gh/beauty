@@ -44,7 +44,7 @@
 }
 
 .links a.l1 {
-	background-color: #e06091;
+	background-color: #545283;
 }
 
 .links a.l2 {
@@ -210,7 +210,7 @@ div.col-xs-6.col-sm-4 > div > h2:hover{
 
 .banner > h2{
 	font-weight: bold;
-	color: #843a75;
+	color: #fff;
 	font-size: 6vw;
 	line-height: 90px;
 }
