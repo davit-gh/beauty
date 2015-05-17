@@ -13,28 +13,9 @@
 {% endblock %}
 
 {% block no_leftest_content %}{% endblock %}
-{% block left-span-size %}sm-6{% endblock %}
-{% block right-span-size %}sm-6{% endblock %}
+{% block no_right_content %}{% endblock %}
 
 {% block left_content %}
-            <article class="grid_5">
-                  <h3>Our Address</h3>
-                  <div class="map">
-                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d195168.0850805345!2d44.4885671!3d40.1533904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x406aa2dab8fc8b5b%3A0x3d1479ae87da526a!2sYerevan%2C+Armenia!5e0!3m2!1sen!2s!4v1421823603586" width="400" height="300" frameborder="0" style="border:0"></iframe>
-                </div>
-                 
-                 <dl class="address" style="color:#fff">
-                    <dt>Aga Image Studio.<br>
-                    Yerevan, Armenia</dt>
-                    
-                    <dd> <span>Telephone:</span> 077 660705 </dd>
-                              
-                  </dl>
-            
-             </article>           
-{% endblock %}
-
-{% block right_content %}
     <article class="grid_5 prefix_2">
             <h3>Contact Us</h3>
             {% if request.GET.sent %}

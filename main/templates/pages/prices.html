@@ -16,15 +16,16 @@
 
  {% block left_content %}
  	<div class="row">
-		<div class="col-sm-4">
+		<div class="col-sm-8">
 				{{ page.prices.content|richtext_filters|safe }}
 		</div>
 		<div class="col-sm-4">
 				{{ page.prices.col2|richtext_filters|safe }}
 		</div>
-		<div class="col-sm-4">
+	<!--	<div class="col-sm-4">
 				{{ page.prices.col3|richtext_filters|safe }}
 		</div>
+	-->
 	</div>
 	<h3>Most Popular Services</h3>
 	<div class="row" id="popular">
