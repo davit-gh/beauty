@@ -229,6 +229,11 @@ div#portitem > p{
 	margin: 25px 0;
 }
 
+div#portitem > ol > li{
+	text-align:justify;
+	margin: 25px 0;
+}
+
 body#portfolioitem{
 	background-color: #E5E4E2;
 }	

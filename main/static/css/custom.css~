@@ -224,7 +224,11 @@ body#contact{
 	background: url("../images/menu-flowers.jpg");
 }
 
-div#portitem > p{
+div#portitem > p, div#portitem > ol > li{
 	text-align:justify;
 	margin: 25px 0;
 }
+
+body#portfolioitem{
+	background-color: #E5E4E2;
+}	
