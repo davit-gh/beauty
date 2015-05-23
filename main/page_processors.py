@@ -10,8 +10,7 @@ def portfolio_processor(request, page):
     Adds a portfolio's portfolio items to the context
     '''
     # get the Portfolio's items, prefetching categories for performance
-    items = PortfolioItem.objects.published(
-        for_user=request.user).prefetch_related('categories')
+    items = PortfolioItem.objects.published().prefetch_related('categories')
     items = items.filter(parent=page)
     # filter out only cateogries that are user in the Portfolio's items
     categories = PortfolioItemCategory.objects.filter(
@@ -38,12 +37,6 @@ def home_processor(request, page):
     
     return {'items': items}
 
-@processor_for('gallery')
-def service_processor(request, page):
-    #pdb.set_trace()
-    items = PortfolioItem.objects.published().prefetch_related('categories')
-    portitems = items.filter(parent=page)
-    return {'portitems': portitems}
 
 @processor_for('about')
 def about_processor(request, page):

@@ -11,18 +11,17 @@
 {% block body_id %}services{% endblock %}
 
 {% block no_right_content %}{% endblock %}
-{% block left-span-size %}sm-9{% endblock %}
+{% block no_leftest_content %}{% endblock %}
+{% block left-span-size %}sm-12{% endblock %}
 
-{% block leftest_content %}
-{{ page.portfolio.content|richtext_filters|safe }}
-{% endblock %}
+
 
  {% block left_content %}
  	<div class="row">
- 		{% for item in portitems %}
-			<div class="col-sm-4">
+ 		{% for item in items %}
+			<div class="col-sm-{{ page.portfolio.columns }}">
 				<img src="{{ MEDIA_URL }}{{ item.featured_image }}" alt="" class="img-responsive">
-				<div class="text1"><a href="#">{{ item.title }}</a></div>
+				<div class="text1"><a href="{{ item.get_absolute_url }}">{{ item.title }}</a></div>
 				{{ item.content|richtext_filters|safe }}
 			</div>
 		{% endfor %}

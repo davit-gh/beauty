@@ -1,0 +1,33 @@
+{% extends "pages/page.html" %}
+
+{% load i18n mezzanine_tags staticfiles %}
+
+{% block body_id %}portfolioitem{% endblock %}
+
+{% block no_right_content %}{% endblock %}
+{% block no_leftest_content %}{% endblock %}
+{% block left-span-size %}sm-12{% endblock %}
+
+
+
+ {% block left_content %}
+ 	<div id="portitem" class="container">
+ 		<h3 class="text-center">{{ page.portfolioitem.title }}</h3>
+ 	
+ 		<img style="padding-left: 40%" src="{{ MEDIA_URL }}{{ page.portfolioitem.featured_image }}" alt="">
+ 	
+ 	{{ page.portfolioitem.short_description|richtext_filter|safe }}
+ 	</div>
+ 	<div class="row">
+
+ 		{% for image in portfolioitem.images.all %}
+			<div class="col-sm-4">
+				<img src="{{ MEDIA_URL }}{{ image.file }}" alt="" class="img-responsive">
+				
+				
+			</div>
+		{% endfor %}
+	</div>
+{% endblock %}
+
+

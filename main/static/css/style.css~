@@ -582,7 +582,3 @@ footer ul li+li {
     background-position: right 0;
     outline: medium none;
 }
-
-div#portitem > p{
-	text-align:justify;
-}
